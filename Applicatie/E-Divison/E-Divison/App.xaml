@@ -1,7 +1,8 @@
 ﻿<Application
-    x:Class="EV_Tool.App"
+    x:Class="E_Divison.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:EV_Tool">
+    xmlns:local="using:E_Divison"
+    RequestedTheme="Light">
 
 </Application>
