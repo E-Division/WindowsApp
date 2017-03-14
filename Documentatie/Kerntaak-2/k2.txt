@@ -22,3 +22,7 @@
 
 ( )10. tool die test of je programma goed geprogrameerd is. unit test of bex ofzo.
 
+11. functionele test: 2 collumen positief en negatief. Verwachtte uitvoer ook erbij zetten,
+de vragen uit het functionele ontwerp halen. VOltoed de knop aan deze afmetingen..?
+Op het eind is de test gepasseerd?
+

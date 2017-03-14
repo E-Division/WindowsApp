@@ -6,12 +6,26 @@ using System.Threading.Tasks;
 
 namespace E_Divison.Classes
 {
-    class Page
+    public class Page
     {
         public int pageID;
         public string pageType;
         public string pageName;
         public string pageDescription;
-        //public string
+        public string pageTextHeader;
+        public string pageTextCenter;
+        public string pageTextFooter;
+        public byte[] pageImage;
+
+        public Page(int pageID, string pageType, string pageDescription, string pageTextHeader, string pageTextCenter, string pageTextFooter, byte[] pageImage)
+        {
+            this.pageID = pageID;
+            this.pageType = pageType;
+            this.pageDescription = pageDescription;
+            this.pageTextHeader = pageTextHeader;
+            this.pageTextCenter = pageTextCenter;
+            this.pageTextFooter = pageTextFooter;
+            this.pageImage = pageImage;
+        }
     }
 }
