@@ -26,5 +26,25 @@ namespace E_Divison
         {
             this.InitializeComponent();
         }
+
+        private void btnAutomotive_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnPrivate_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnBusiness_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void imgEdivisionHeader_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
