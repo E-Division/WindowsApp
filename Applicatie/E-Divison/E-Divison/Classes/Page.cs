@@ -27,5 +27,16 @@ namespace E_Divison.Classes
             this.pageTextFooter = pageTextFooter;
             this.pageImage = pageImage;
         }
+
+        public void CreateTable(SQLite.Net.SQLiteConnection con)
+        {
+            con.CreateTable<Page>();
+            con.Insert(new Page(0, ""));
+            //con.Insert(new Page()
+            //{
+            //    Name = textBox.Text,
+            //    Age = textBox1.Text
+            //});
+        }
     }
 }
