@@ -17,10 +17,11 @@ namespace E_Divison.Classes
         public string pageTextFooter;
         public byte[] pageImage;
 
-        public Page(int pageID, string pageType, string pageDescription, string pageTextHeader, string pageTextCenter, string pageTextFooter, byte[] pageImage)
+        public Page(int pageID, string pageType, string pageName, string pageDescription, string pageTextHeader, string pageTextCenter, string pageTextFooter, byte[] pageImage)
         {
             this.pageID = pageID;
             this.pageType = pageType;
+            this.pageName = pageName;
             this.pageDescription = pageDescription;
             this.pageTextHeader = pageTextHeader;
             this.pageTextCenter = pageTextCenter;
@@ -31,7 +32,7 @@ namespace E_Divison.Classes
         public void CreateTable(SQLite.Net.SQLiteConnection con)
         {
             con.CreateTable<Page>();
-            con.Insert(new Page(0, ""));
+            con.Insert(new Page(1, "Activity", "Home", "E-Division", "", "", "", new byte[new byte[], ]));
             //con.Insert(new Page()
             //{
             //    Name = textBox.Text,

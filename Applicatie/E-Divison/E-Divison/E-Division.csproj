@@ -98,6 +98,7 @@
     <Compile Include="Classes\Brand.cs" />
     <Compile Include="Classes\Category.cs" />
     <Compile Include="Classes\DatabaseManager.cs" />
+    <Compile Include="Classes\ImageManager.cs" />
     <Compile Include="Classes\Page.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
