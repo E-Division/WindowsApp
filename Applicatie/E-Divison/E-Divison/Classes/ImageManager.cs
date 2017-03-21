@@ -1,37 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
-using Windows.Storage;
 using Windows.Storage.Streams;
-using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
 
 namespace E_Divison.Classes
 {
     public class ImageManager
     {
-        public async Task<byte[]> imageToByteArray(StorageFile File)
+        private async void SetImage(byte[] image)
         {
-            var stream = await File.OpenReadAsync();
-
-            using (var dataReader = new DataReader(stream))
+            if (image != null)
             {
-                var bytes = new byte[stream.Size];
-                await dataReader.LoadAsync((uint)stream.Size);
-                dataReader.ReadBytes(bytes);
-
-                return Convert.ToBase64String(bytes);
+                BitmapImage imagemap = new BitmapImage();
+                imagemap.SetSource(await ConvertTo(image));
+                //img_ProductImage.Source = imagemap;
             }
         }
 
-        public Image byteArrayToImage(byte[] byteArrayIn)
+        private async Task<InMemoryRandomAccessStream> ConvertTo(byte[] arr)
         {
-            MemoryStream ms = new MemoryStream(byteArrayIn);
-            Image returnImage = Image.FromStream(ms);
-            return returnImage;
+            InMemoryRandomAccessStream randomAccessStream = new InMemoryRandomAccessStream();
+            await randomAccessStream.WriteAsync(arr.AsBuffer());
+            randomAccessStream.Seek(0);
+            return randomAccessStream;
         }
     }
 }
