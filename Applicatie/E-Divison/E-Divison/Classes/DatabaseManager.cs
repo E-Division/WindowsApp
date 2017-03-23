@@ -18,11 +18,16 @@ namespace E_Divison.Classes
 
             con = new SQLite.Net.SQLiteConnection(new
             SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
-
             
         }
 
-        public SQLiteConnection getCon()
+        public void CreateTables()
+        {
+            //var tableQuery = "SELECT COUNT(*) FROM tbl_Page;";
+            //bool tableExists = con.ExecuteScalar<int>(tableQuery) == 1;
+            con.CreateTable<Page>();
+        }
+        public SQLiteConnection GetCon()
         {
             return con;
         }

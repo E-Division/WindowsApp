@@ -24,6 +24,7 @@ namespace E_Divison.Classes
             this.categoryParentID = categoryParentID;
             this.categoryName = categoryName;
             this.categoryDescription = categoryDescription;
+            this.categoryImage = categoryImage;
         }
 
     }

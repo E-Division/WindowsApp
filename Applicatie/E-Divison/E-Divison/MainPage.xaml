@@ -8,9 +8,6 @@
     mc:Ignorable="d">
 
     <Grid Background="#FF30ACEC">
-        <Button x:Name="btnAutomotive" Content="Automotive" HorizontalAlignment="Left" Margin="45,158,0,0" VerticalAlignment="Top" Click="btnAutomotive_Click" RequestedTheme="Light" Background="White"/>
-        <Button x:Name="btnBusiness" Content="Zakelijk" HorizontalAlignment="Left" Margin="243,158,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.231,0.188" RequestedTheme="Light" Background="White" Click="btnZakelijk_Click"/>
-        <Button x:Name="btnPrivate" Content="Particulier" HorizontalAlignment="Left" Margin="150,245,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.462,0.75" Click="btnParticulier_Click" RequestedTheme="Light" Background="White"/>
         <Button x:Name="btnSettings" Content="settings" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="285,0,0,0" Height="34" RequestedTheme="Light" Width="75">
             <Button.Background>
                 <SolidColorBrush Color="White"/>
