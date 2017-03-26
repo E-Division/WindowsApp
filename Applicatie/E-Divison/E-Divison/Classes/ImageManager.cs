@@ -11,6 +11,7 @@ namespace E_Divison.Classes
 {
     public class ImageManager
     {
+        //NIET IN GEBRUIk
         private async void SetImage(byte[] image)
         {
             if (image != null)

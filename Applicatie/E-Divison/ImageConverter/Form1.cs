@@ -21,7 +21,7 @@ namespace ImageConverter
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
         //private void btn_restoreImage_Click(object sender, EventArgs e)
         //{
@@ -58,7 +58,11 @@ namespace ImageConverter
             {
                 tbOutput.Text += b + ", ";
             }
+
+
+           
             return ms.ToArray();
         }
+
     }
 }

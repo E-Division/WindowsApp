@@ -30,6 +30,7 @@ namespace E_Divison
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            Classes.DatabaseManager databaseManager = new Classes.DatabaseManager();
         }
 
         /// <summary>
