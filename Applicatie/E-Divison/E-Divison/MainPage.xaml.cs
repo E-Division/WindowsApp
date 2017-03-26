@@ -33,6 +33,11 @@ namespace E_Divison
             //Classes.Page page = new Classes.Page();
             //page.GetPages(dM.GetCon());
             //SetImage(page.pageImage);
+            UserControls.PageHeaderUserControl pageHeader = new UserControls.PageHeaderUserControl();
+
+            spHeader.Children.Add(pageHeader);
+            UserControls.PageActivityUserControl pageActivity = new UserControls.PageActivityUserControl();
+            spContent.Children.Add(pageActivity);
 
         }
 
@@ -42,7 +47,7 @@ namespace E_Divison
             {
                 BitmapImage imagemap = new BitmapImage();
                 imagemap.SetSource(await ConvertTo(image));
-                imgDivision.Source = imagemap;
+                //imgDivision.Source = imagemap;
             }
         }
 

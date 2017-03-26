@@ -6,15 +6,12 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="300"
-    d:DesignWidth="400">
+    d:DesignHeight="50"
+    d:DesignWidth="360">
 
-    <Grid Background="White">
-        <Image x:Name="image" HorizontalAlignment="Left" Height="52.361" VerticalAlignment="Top" Width="109.419" RenderTransformOrigin="0.5,0.5" Margin="0.052,0.01,0,0" UseLayoutRounding="False" d:LayoutRounding="Auto">
-            <Image.RenderTransform>
-                <CompositeTransform Rotation="0.126"/>
-            </Image.RenderTransform>
-        </Image>
-
+    <Grid Background="#FF30ACEC">
+        <Image x:Name="imgHome" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Source="ms-appx:///Assets/home.png" Stretch="Fill"/>
+        <Image x:Name="imgBack" HorizontalAlignment="Left" Height="50" Margin="51,0,0,0" VerticalAlignment="Top" Width="50" Source="ms-appx:///Assets/arrow-left-thick.png"/>
+        <Image x:Name="imgSettings" HorizontalAlignment="Left" Height="50" Margin="310,0,0,0" VerticalAlignment="Top" Width="50" Source="ms-appx:///Assets/settings.png"/>
     </Grid>
 </UserControl>

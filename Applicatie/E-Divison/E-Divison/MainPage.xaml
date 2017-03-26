@@ -7,14 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="#FF30ACEC">
-        <Button x:Name="btnSettings" Content="settings" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="285,0,0,0" Height="34" RequestedTheme="Light" Width="75">
-            <Button.Background>
-                <SolidColorBrush Color="White"/>
-            </Button.Background>
-        </Button>
-        <Image x:Name="imgEdivisionHeader" HorizontalAlignment="Left" Height="53" VerticalAlignment="Top" Width="117" RenderTransformOrigin="0.5,0.44" Source="Assets/Image636228400665325432.jpg"/>
-        <Image x:Name="imgDivision" HorizontalAlignment="Left" Height="100" Margin="99,142,0,0" VerticalAlignment="Top" Width="100"/>
+    <StackPanel x:Name="spAll">
+        <StackPanel x:Name="spHeader" Height="50">
 
-    </Grid>
+        </StackPanel>
+        <StackPanel x:Name="spContent" Height="590">
+
+        </StackPanel>
+    </StackPanel>
+
 </Page>
