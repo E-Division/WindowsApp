@@ -29,14 +29,17 @@ namespace E_Divison
         public MainPage()
         {
             this.InitializeComponent();
+            int categoryID = 0;
             //DatabaseManager dM = new DatabaseManager();
             //Classes.Page page = new Classes.Page();
             //page.GetPages(dM.GetCon());
             //SetImage(page.pageImage);
-            UserControls.PageHeaderUserControl pageHeader = new UserControls.PageHeaderUserControl();
+            UserControls.PageHeaderUserControl pageHeader = new UserControls.PageHeaderUserControl(categoryID);
 
             spHeader.Children.Add(pageHeader);
-            UserControls.PageActivityUserControl pageActivity = new UserControls.PageActivityUserControl();
+
+            UserControls.PageActivityUserControl pageActivity = new UserControls.PageActivityUserControl(categoryID);
+            
             spContent.Children.Add(pageActivity);
 
         }

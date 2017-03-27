@@ -85,8 +85,9 @@ namespace E_Divison.Classes
             con.Insert(new Category(37, 37, 19, "Mia Vamil", "Omschrijving van Deze categorie", categoryImage));
         }
 
-        public void GetCategory(SQLite.Net.SQLiteConnection con)
+        public void GetCategory(int categoryID)
         {
+            SQLite.Net.SQLiteConnection con = new DatabaseManager().GetCon();
             var query = con.Table<Category>();
 
             foreach (var message in query)

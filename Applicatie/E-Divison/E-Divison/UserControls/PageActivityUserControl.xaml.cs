@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using E_Divison.Classes;
 
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
@@ -19,9 +20,16 @@ namespace E_Divison.UserControls
 {
     public sealed partial class PageActivityUserControl : UserControl
     {
-        public PageActivityUserControl()
+        private int categoryID;
+        public PageActivityUserControl(int categoryID)
         {
             this.InitializeComponent();
+            this.categoryID = categoryID;
+        }
+
+        private void LoadCategory()
+        {
+            
         }
     }
 }

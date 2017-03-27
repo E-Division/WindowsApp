@@ -19,7 +19,7 @@ namespace E_Divison.UserControls
 {
     public sealed partial class PageHeaderUserControl : UserControl
     {
-        public PageHeaderUserControl()
+        public PageHeaderUserControl(int categoryID)
         {
             this.InitializeComponent();
         }
