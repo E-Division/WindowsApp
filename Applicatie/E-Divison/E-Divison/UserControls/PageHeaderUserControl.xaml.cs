@@ -19,9 +19,21 @@ namespace E_Divison.UserControls
 {
     public sealed partial class PageHeaderUserControl : UserControl
     {
+        private int categoryID;
         public PageHeaderUserControl(int categoryID)
         {
             this.InitializeComponent();
+            this.categoryID = categoryID;
+            LoadCategory();
+        }
+
+        private void LoadCategory()
+        {
+            if (categoryID == 0)
+            {
+                //imgHome.Source =
+                imgBack.Visibility = Visibility.Collapsed;
+            }
         }
     }
 }

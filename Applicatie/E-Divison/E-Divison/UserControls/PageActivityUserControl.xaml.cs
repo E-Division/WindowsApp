@@ -25,11 +25,15 @@ namespace E_Divison.UserControls
         {
             this.InitializeComponent();
             this.categoryID = categoryID;
+            LoadCategory();
         }
 
         private void LoadCategory()
         {
-            
+            if(categoryID == 0)
+            {
+
+            }
         }
     }
 }
