@@ -73,16 +73,16 @@ namespace E_Divison.Classes
 
             con.Insert(new Category(26, 26, 12, "Publiek laden", "Omschrijving van Deze categorie", categoryImage));
             con.Insert(new Category(27, 27, 12, "Thuis laden", "Omschrijving van Deze categorie", categoryImage));
-            con.Insert(new Category(29, 29, 12, "Snel laden", "Omschrijving van Deze categorie", categoryImage));
-            con.Insert(new Category(30, 30, 14, "Voertuigen", "Omschrijving van Deze categorie", categoryImage));
-            con.Insert(new Category(31, 31, 15, "Mia Vamil", "Omschrijving van Deze categorie", categoryImage));
-            con.Insert(new Category(32, 32, 15, "Bijtelling", "Omschrijving van Deze categorie", categoryImage));
+            con.Insert(new Category(28, 28, 12, "Snel laden", "Omschrijving van Deze categorie", categoryImage));
+            con.Insert(new Category(29, 29, 14, "Voertuigen", "Omschrijving van Deze categorie", categoryImage));
+            con.Insert(new Category(30, 30, 15, "Mia Vamil", "Omschrijving van Deze categorie", categoryImage));
+            con.Insert(new Category(31, 31, 15, "Bijtelling", "Omschrijving van Deze categorie", categoryImage));
 
-            con.Insert(new Category(33, 33, 16, "Publiek laden", "Omschrijving van Deze categorie", categoryImage));
-            con.Insert(new Category(34, 34, 16, "Thuis laden", "Omschrijving van Deze categorie", categoryImage));
-            con.Insert(new Category(35, 35, 16, "Snel laden", "Omschrijving van Deze categorie", categoryImage));
-            con.Insert(new Category(36, 36, 18, "Voertuigen", "Omschrijving van Deze categorie", categoryImage));
-            con.Insert(new Category(37, 37, 19, "Mia Vamil", "Omschrijving van Deze categorie", categoryImage));
+            con.Insert(new Category(32, 32, 16, "Publiek laden", "Omschrijving van Deze categorie", categoryImage));
+            con.Insert(new Category(33, 33, 16, "Thuis laden", "Omschrijving van Deze categorie", categoryImage));
+            con.Insert(new Category(34, 34, 16, "Snel laden", "Omschrijving van Deze categorie", categoryImage));
+            con.Insert(new Category(35, 35, 18, "Voertuigen", "Omschrijving van Deze categorie", categoryImage));
+            con.Insert(new Category(36, 36, 19, "Mia Vamil", "Omschrijving van Deze categorie", categoryImage));
         }
 
         public void GetCategory(int categoryID)
