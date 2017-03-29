@@ -35,7 +35,7 @@ namespace E_Divison
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            if (!CheckFileExists("customers.sqlite").Result)
+            if (!CheckFileExists("db.sqlite").Result)
             {
                 using (SQLiteConnection db = new SQLiteConnection(new
             SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), dbPath))
