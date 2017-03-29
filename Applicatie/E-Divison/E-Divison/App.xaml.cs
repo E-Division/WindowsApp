@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite.Net;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,6 +8,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -14,6 +16,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using E_Divison.Classes;
+using System.Threading.Tasks;
 
 namespace E_Divison
 {
@@ -26,13 +30,59 @@ namespace E_Divison
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
+        public static string dbPath = Path.Combine(Path.Combine(ApplicationData.Current.LocalFolder.Path, "db.sqlite"));
         public App()
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            Classes.DatabaseManager databaseManager = new Classes.DatabaseManager();
+            if (!CheckFileExists("customers.sqlite").Result)
+            {
+                using (SQLiteConnection db = new SQLiteConnection(new
+            SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), dbPath))
+                {
+                    //Classes.DatabaseManager databaseManager = new Classes.DatabaseManager();
+                    db.CreateTable<Classes.Page>();
+                    db.CreateTable<Classes.Category>();
+                    db.CreateTable<Classes.Brand>();
+                    Classes.Page page = new Classes.Page();
+                    page.InsertPages(db);
+                    Brand brand = new Brand();
+                    Category category = new Category();
+                    brand.InsertBrands(db);
+                    category.InsertCategories(db);
+
+                }
+            }
+
+           
         }
 
+        private async Task<bool> CheckFileExists(string fileName)
+        {
+            try
+            {
+                await Windows.Storage.ApplicationData.Current.LocalFolder.GetFileAsync(fileName);
+                return true;
+            }
+            catch
+            {
+            }
+            return false;
+        }
+        //private void CreateTables()
+        //{
+        //    //var tableQuery = "SELECT COUNT(*) FROM tbl_Page;";
+        //    //bool tableExists = con.ExecuteScalar<int>(tableQuery) == 1;
+        //    con.CreateTable<Page>();
+        //    Page page = new Page();
+        //    page.InsertPages(con);
+        //    con.CreateTable<Category>();
+        //    Category category = new Category();
+        //    category.InsertCategories(con);
+        //    con.CreateTable<Brand>();
+        //    Brand brand = new Brand();
+        //    brand.InsertBrands(con);
+        //}
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
         /// will be used such as when the application is launched to open a specific file.

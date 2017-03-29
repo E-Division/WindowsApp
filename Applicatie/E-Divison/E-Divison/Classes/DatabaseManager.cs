@@ -11,18 +11,19 @@ namespace E_Divison.Classes
     {
         private SQLite.Net.SQLiteConnection con;
         private string databaseName;
+        private string path;
         public DatabaseManager()
         {
             Init();
-            //if (!CheckFileExists(databaseName).Result)
-            //{
-                CreateTables();
-            //}
+        //    if (!CheckFileExists(path).Result)
+        //    {
+        //        CreateTables();
+        //    }
         }
         private void Init()
         {
             databaseName = "db.sqlite";
-            string path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, databaseName);
+            path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, databaseName);
             con = new SQLite.Net.SQLiteConnection(new
             SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
         }
