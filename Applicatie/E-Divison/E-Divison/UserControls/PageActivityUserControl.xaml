@@ -8,9 +8,15 @@
     mc:Ignorable="d"
     d:DesignHeight="590"
     d:DesignWidth="400">
-
+    
+    
     <Grid Background="#FF30ACEC">
-        <TextBlock x:Name="tbPageName" HorizontalAlignment="Left" Margin="155,46,0,0" TextWrapping="Wrap" Text="PageName" VerticalAlignment="Top"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="1" x:Name="tbPageName" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="PageName" VerticalAlignment="Top"/>
         <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="125,195,0,0" VerticalAlignment="Top" Click="button_Click"/>
     </Grid>
 </UserControl>

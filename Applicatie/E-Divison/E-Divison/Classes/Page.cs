@@ -86,22 +86,18 @@ namespace E_Divison.Classes
         public void GetPage()
         {
             SQLiteConnection con = new DatabaseManager().GetCon();
-            var query = con.Table<Page>();
-
-            foreach (var message in query)
+            var tableQuery = "SELECT * FROM Page WHERE pageID = " + pageID.ToString() + ";";
+            List<Page> selectedPage = con.Query<Page>(tableQuery);
+            if (selectedPage.Count > 0)
             {
-                if(message.pageID == pageID)
-                {
-                    this.pageType = message.pageType;
-                    this.pageName = message.pageName;
-                    this.pageImage = message.pageImage;
-                    this.pageDescription = message.pageDescription;
-                    this.pageTextHeader = message.pageTextHeader;
-                    this.pageTextCenter = message.pageTextCenter;
-                    this.pageTextFooter = message.pageTextFooter;
-                    this.pageImage = message.pageImage;
-                    break;
-                }
+                    this.pageType = selectedPage[0].pageType;
+                    this.pageName = selectedPage[0].pageName;
+                    this.pageImage = selectedPage[0].pageImage;
+                    this.pageDescription = selectedPage[0].pageDescription;
+                    this.pageTextHeader = selectedPage[0].pageTextHeader;
+                    this.pageTextCenter = selectedPage[0].pageTextCenter;
+                    this.pageTextFooter = selectedPage[0].pageTextFooter;
+                    this.pageImage = selectedPage[0].pageImage;
             }
         }
       

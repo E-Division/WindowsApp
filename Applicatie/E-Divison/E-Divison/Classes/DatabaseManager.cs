@@ -28,20 +28,20 @@ namespace E_Divison.Classes
             SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
         }
 
-        private void CreateTables()
-        {
-            //var tableQuery = "SELECT COUNT(*) FROM tbl_Page;";
-            //bool tableExists = con.ExecuteScalar<int>(tableQuery) == 1;
-            con.CreateTable<Page>();
-            Page page = new Page();
-            page.InsertPages(con);
-            con.CreateTable<Category>();
-            Category category = new Category();
-            category.InsertCategories(con);
-            con.CreateTable<Brand>();
-            Brand brand = new Brand();
-            brand.InsertBrands(con);
-        }
+        //private void CreateTables()
+        //{
+        //    //var tableQuery = "SELECT COUNT(*) FROM tbl_Page;";
+        //    //bool tableExists = con.ExecuteScalar<int>(tableQuery) == 1;
+        //    con.CreateTable<Page>();
+        //    Page page = new Page();
+        //    page.InsertPages(con);
+        //    con.CreateTable<Category>();
+        //    Category category = new Category();
+        //    category.InsertCategories(con);
+        //    con.CreateTable<Brand>();
+        //    Brand brand = new Brand();
+        //    brand.InsertBrands(con);
+        //}
         public SQLiteConnection GetCon()
         {
             return con;

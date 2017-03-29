@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite.Net;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -40,6 +41,20 @@ namespace E_Divison.Classes
             con.Insert(new Brand(1, 2, "twizy", pageImage));
             con.Insert(new Brand(2, 2, "Zoë", pageImage));
             con.Insert(new Brand(3, 2, "Kangoo Z.E.", pageImage));
+        }
+
+        public void GetPage()
+        {
+            SQLiteConnection con = new DatabaseManager().GetCon();
+            var tableQuery = "SELECT * FROM Brand WHERE brandID = " + brandID.ToString() + ";";
+            List<Brand> selectedBrand = con.Query<Brand>(tableQuery);
+            if (selectedBrand.Count > 0)
+            {
+                this.brandID = selectedBrand[0].brandID;
+                this.brandParentID = selectedBrand[0].brandParentID;
+                this.brandName = selectedBrand[0].brandName;
+                this.brandImage = selectedBrand[0].brandImage;
+            }
         }
     }
 }

@@ -89,20 +89,16 @@ namespace E_Divison.Classes
         public void GetCategory()
         {
             SQLiteConnection con = new DatabaseManager().GetCon();
-            var query = con.Table<Category>();
-
-            foreach (var message in query)
+            var tableQuery = "SELECT * FROM Category WHERE categoryID = " + categoryID.ToString() + ";";
+            List<Category> selectedCategory = con.Query<Category>(tableQuery);
+            if(selectedCategory.Count > 0)
             {
-                if(message.categoryID == categoryID)
-                {
-                    this.pageID = message.pageID;
-                    this.categoryID = message.categoryID;
-                    this.categoryParentID = message.categoryParentID;
-                    this.categoryName = message.categoryName;
-                    this.categoryDescription = message.categoryDescription;
-                    this.categoryImage = message.categoryImage;
-                    break;
-                }
+                this.pageID = selectedCategory[0].pageID;
+                this.categoryID = selectedCategory[0].categoryID;
+                this.categoryParentID = selectedCategory[0].categoryParentID;
+                this.categoryName = selectedCategory[0].categoryName;
+                this.categoryDescription = selectedCategory[0].categoryDescription;
+                this.categoryImage = selectedCategory[0].categoryImage;
             }
         }
 
