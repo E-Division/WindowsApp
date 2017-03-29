@@ -29,57 +29,28 @@ namespace E_Divison
         public MainPage()
         {
             this.InitializeComponent();
-            int categoryID = 0;
+            int categoryID = 1;
+            PageLoader(categoryID);
             //DatabaseManager dM = new DatabaseManager();
             //Classes.Page page = new Classes.Page();
             //page.GetPages(dM.GetCon());
             //SetImage(page.pageImage);
+
+        }
+
+        public void PageLoader(int categoryID)
+        {
+            spHeader.Children.Clear();
+            spContent.Children.Clear();
             UserControls.PageHeaderUserControl pageHeader = new UserControls.PageHeaderUserControl(categoryID);
 
             spHeader.Children.Add(pageHeader);
 
-            UserControls.PageActivityUserControl pageActivity = new UserControls.PageActivityUserControl(categoryID);
+            UserControls.PageActivityUserControl pageActivity = new UserControls.PageActivityUserControl(this, categoryID);
             
             spContent.Children.Add(pageActivity);
 
         }
-
-        private async void SetImage(byte[] image)
-        {
-            if (image != null)
-            {
-                BitmapImage imagemap = new BitmapImage();
-                imagemap.SetSource(await ConvertTo(image));
-                //imgDivision.Source = imagemap;
-            }
-        }
-
-        private async Task<InMemoryRandomAccessStream> ConvertTo(byte[] arr)
-        {
-            InMemoryRandomAccessStream randomAccessStream = new InMemoryRandomAccessStream();
-            await randomAccessStream.WriteAsync(arr.AsBuffer());
-            randomAccessStream.Seek(0);
-            return randomAccessStream;
-        }
-
-        private void BtnAutomotive_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void BtnPrivate_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void BtnBusiness_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ImgEdivisionHeader_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+      
     }
 }

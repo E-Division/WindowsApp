@@ -6,19 +6,20 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage.Streams;
 using Windows.UI.Xaml.Media.Imaging;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 
 namespace E_Divison.Classes
 {
     public class ImageManager
     {
-        //NIET IN GEBRUIk
-        private async void SetImage(byte[] image)
+        public async void SetImage(Image imageControl, byte[] imageArray)
         {
-            if (image != null)
+            if (imageArray != null)
             {
-                BitmapImage imagemap = new BitmapImage();
-                imagemap.SetSource(await ConvertTo(image));
-                //img_ProductImage.Source = imagemap;
+                BitmapImage imageMap = new BitmapImage();
+                imageMap.SetSource(await ConvertTo(imageArray));
+                imageControl.Source = imageMap;
             }
         }
 

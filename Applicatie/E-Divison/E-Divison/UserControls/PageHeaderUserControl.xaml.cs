@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using E_Divison.Classes;
 
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
@@ -29,11 +30,19 @@ namespace E_Divison.UserControls
 
         private void LoadCategory()
         {
-            if (categoryID == 0)
+            Category category = new Category();
+            category.categoryID = categoryID;
+            category.GetCategory();
+
+            if (categoryID == 1)
             {
-                //imgHome.Source =
+                ImageManager imageManager = new ImageManager();
                 imgBack.Visibility = Visibility.Collapsed;
+                imageManager.SetImage(imgHome, category.categoryImage);
+                //imgHome.Source = new BitMap(category.categoryImage);
             }
         }
+
+
     }
 }

@@ -21,19 +21,33 @@ namespace E_Divison.UserControls
     public sealed partial class PageActivityUserControl : UserControl
     {
         private int categoryID;
-        public PageActivityUserControl(int categoryID)
+        private MainPage mainPage;
+        public PageActivityUserControl(MainPage mainPage, int categoryID)
         {
             this.InitializeComponent();
             this.categoryID = categoryID;
+            this.mainPage = mainPage;
             LoadCategory();
         }
 
         private void LoadCategory()
         {
-            if(categoryID == 0)
-            {
+            Category category = new Category();
+            category.categoryID = categoryID;
+            category.GetCategory();
 
+            if (categoryID == 1)
+            {
+                //ImageManager imageManager = new ImageManager();
+                //.Visibility = Visibility.Collapsed;
+                //imageManager.SetImage(imgHome, category.categoryImage);
+                //imgHome.Source = new BitMap(category.categoryImage);
             }
+        }
+        
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            mainPage.PageLoader(2);
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SQLite.Net;
 
 namespace E_Divison.Classes
 {
@@ -85,19 +86,23 @@ namespace E_Divison.Classes
             con.Insert(new Category(36, 36, 19, "Mia Vamil", "Omschrijving van Deze categorie", categoryImage));
         }
 
-        public void GetCategory(int categoryID)
+        public void GetCategory()
         {
-            SQLite.Net.SQLiteConnection con = new DatabaseManager().GetCon();
+            SQLiteConnection con = new DatabaseManager().GetCon();
             var query = con.Table<Category>();
 
             foreach (var message in query)
             {
-                pageID = message.pageID;
-                categoryID = message.categoryID;
-                categoryParentID = message.categoryParentID;
-                categoryName = message.categoryName;
-                categoryDescription = message.categoryDescription;
-                categoryImage = message.categoryImage;
+                if(message.categoryID == categoryID)
+                {
+                    this.pageID = message.pageID;
+                    this.categoryID = message.categoryID;
+                    this.categoryParentID = message.categoryParentID;
+                    this.categoryName = message.categoryName;
+                    this.categoryDescription = message.categoryDescription;
+                    this.categoryImage = message.categoryImage;
+                    break;
+                }
             }
         }
 

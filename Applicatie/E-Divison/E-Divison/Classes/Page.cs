@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite.Net;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -82,21 +83,25 @@ namespace E_Divison.Classes
 
         }
 
-        public void GetPages(SQLite.Net.SQLiteConnection con)
+        public void GetPage()
         {
+            SQLiteConnection con = new DatabaseManager().GetCon();
             var query = con.Table<Page>();
 
             foreach (var message in query)
             {
-                pageID = message.pageID;
-                pageType = message.pageType;
-                pageName = message.pageName;
-                pageImage = message.pageImage;
-                pageDescription = message.pageDescription;
-                pageTextHeader = message.pageTextHeader;
-                pageTextCenter = message.pageTextCenter;
-                pageTextFooter = message.pageTextFooter;
-                pageImage = message.pageImage;
+                if(message.pageID == pageID)
+                {
+                    this.pageType = message.pageType;
+                    this.pageName = message.pageName;
+                    this.pageImage = message.pageImage;
+                    this.pageDescription = message.pageDescription;
+                    this.pageTextHeader = message.pageTextHeader;
+                    this.pageTextCenter = message.pageTextCenter;
+                    this.pageTextFooter = message.pageTextFooter;
+                    this.pageImage = message.pageImage;
+                    break;
+                }
             }
         }
       

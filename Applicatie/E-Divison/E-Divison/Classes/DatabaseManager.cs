@@ -14,10 +14,10 @@ namespace E_Divison.Classes
         public DatabaseManager()
         {
             Init();
-            if (!CheckFileExists(databaseName).Result)
-            {
+            //if (!CheckFileExists(databaseName).Result)
+            //{
                 CreateTables();
-            }
+            //}
         }
         private void Init()
         {
