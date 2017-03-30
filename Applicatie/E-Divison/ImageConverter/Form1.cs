@@ -50,15 +50,22 @@ namespace ImageConverter
         public byte[] imageToByteArray(System.Drawing.Image imageIn)
         {
             MemoryStream ms = new MemoryStream();
-            imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+            imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
             var sb = new StringBuilder("new byte[] { ");
-            tbOutput.Text = Encoding.ASCII.GetString(ms.ToArray());
+            tbOutput.Text = sb.ToString();
+            //tbOutput.Text = Encoding.ASCII.GetString(ms.ToArray());
 
             foreach (var b in ms.ToArray())
             {
                 tbOutput.Text += b + ", ";
             }
 
+           // tbOutput.Text.Remove(tbOutput.TextLength);
+            tbOutput.Text = tbOutput.Text.Substring(0, tbOutput.TextLength - 2);
+
+            tbOutput.Text += " };";
+            tbOutput.SelectAll();
+            tbOutput.Focus();
             //GetBytes(Encoding.ASCII.GetString(ms.ToArray()));
 
 

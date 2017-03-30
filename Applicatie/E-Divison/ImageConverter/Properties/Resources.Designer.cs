@@ -93,6 +93,16 @@ namespace ImageConverter.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _02_Renault_44564_global1 {
+            get {
+                object obj = ResourceManager.GetObject("02_Renault_44564_global1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Image636228400665325432 {
             get {
                 object obj = ResourceManager.GetObject("Image636228400665325432", resourceCulture);
