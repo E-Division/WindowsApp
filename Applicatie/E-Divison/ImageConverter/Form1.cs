@@ -16,7 +16,6 @@ namespace ImageConverter
         public Form1()
         {
             InitializeComponent();
-            imageToByteArray(pictureBox1.Image);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -53,16 +52,54 @@ namespace ImageConverter
             MemoryStream ms = new MemoryStream();
             imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
             var sb = new StringBuilder("new byte[] { ");
-            tbOutput.Text = sb.ToString();
+            tbOutput.Text = Encoding.ASCII.GetString(ms.ToArray());
+
             foreach (var b in ms.ToArray())
             {
                 tbOutput.Text += b + ", ";
             }
 
+            //GetBytes(Encoding.ASCII.GetString(ms.ToArray()));
 
-           
+
+
             return ms.ToArray();
         }
 
+        public byte[] GetBytes(string str)
+        {
+            byte[] bytes = new byte[str.Length * sizeof(char)];
+            System.Buffer.BlockCopy(str.ToCharArray(), 0, bytes, 0, bytes.Length);
+            tbOutput.Text += bytes;
+            return bytes;
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png";
+            DialogResult result = openFileDialog1.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                this.pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+                if (openFileDialog1.FileName.Contains(".png") || openFileDialog1.FileName.Contains(".jpg"))
+                {
+                    pictureBox1.Image = new Bitmap(openFileDialog1.FileName);
+                    imageToByteArray(pictureBox1.Image);
+
+                }
+                else
+                {
+                    pictureBox1.Image = null;
+                    MessageBox.Show("The image you have selected does not meet the requirements Extensions supported: JPG, PNG",
+                     "Image selector",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Exclamation,
+                     MessageBoxDefaultButton.Button1);
+                }
+            }
+
+        }
     }
 }
