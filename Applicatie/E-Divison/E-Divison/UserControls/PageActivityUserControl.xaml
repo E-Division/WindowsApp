@@ -16,7 +16,6 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" x:Name="tbPageName" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="PageName" VerticalAlignment="Top" Foreground="#FFD4EFFD"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="125,195,0,0" VerticalAlignment="Top" Click="button_Click"/>
+        <TextBlock Grid.Row="0" x:Name="tbPageName" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="PageName" VerticalAlignment="Top" Foreground="#FFD4EFFD" FontFamily="ms-appx:///Assets/RobotoCondensed-Regular.ttf" FontSize="22"/>
     </Grid>
 </UserControl>

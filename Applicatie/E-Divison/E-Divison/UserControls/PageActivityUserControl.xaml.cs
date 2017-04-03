@@ -45,9 +45,9 @@ namespace E_Divison.UserControls
             }
         }
         
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            mainPage.PageLoader(2);
-        }
+        //private void button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    mainPage.PageLoader(2);
+        //}
     }
 }

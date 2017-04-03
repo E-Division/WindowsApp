@@ -42,7 +42,7 @@ namespace E_Divison
         {
             spHeader.Children.Clear();
             spContent.Children.Clear();
-            UserControls.PageHeaderUserControl pageHeader = new UserControls.PageHeaderUserControl(categoryID);
+            UserControls.PageHeaderUserControl pageHeader = new UserControls.PageHeaderUserControl(this, categoryID);
 
             spHeader.Children.Add(pageHeader);
 
