@@ -34,19 +34,33 @@ namespace E_Divison.UserControls
         private void LoadCategory()
         {
 
-            if (categoryID == 1)
+            if (categoryID == 1 || categoryID == 2)
             {
                 imgBack.Visibility = Visibility.Collapsed;
                 imgHome.Source = new BitmapImage(new Uri("ms-appx:///Assets/Image636228400665325432.jpg"));
                 imgHome.Width = 200;
                 //imgHome.Source = new BitmapImage(new Uri("/MyProject;Assets/Image636228400664674921.jpg", UriKind.Relative));
             }
-            else
-            {
-                //click event kk homo
-            }
         }
 
+        private void OpenCategory(int categoryID)
+        {
+            mainPage.PageLoader(categoryID);
+        }
 
+        private void imgBack_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            OpenCategory(categoryID - 1);
+        }
+
+        private void imgSettings_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            OpenCategory(categoryID - 1);
+        }
+
+        private void imgHome_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            OpenCategory(1);
+        }
     }
 }

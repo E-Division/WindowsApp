@@ -36,13 +36,13 @@ namespace E_Divison.UserControls
             category.categoryID = categoryID;
             category.GetCategory();
 
-            if (categoryID == 1)
-            {
+            //if (categoryID == 1)
+            //{
                 //ImageManager imageManager = new ImageManager();
                 //.Visibility = Visibility.Collapsed;
                 //imageManager.SetImage(imgHome, category.categoryImage);
                 //imgHome.Source = new BitMap(category.categoryImage);
-            }
+            //}
         }
         
         //private void button_Click(object sender, RoutedEventArgs e)

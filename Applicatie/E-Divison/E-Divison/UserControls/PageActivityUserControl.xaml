@@ -8,14 +8,21 @@
     mc:Ignorable="d"
     d:DesignHeight="590"
     d:DesignWidth="400">
-    
-    
+
+
     <Grid Background="#FF30ACEC">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" x:Name="tbPageName" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="PageName" VerticalAlignment="Top" Foreground="#FFD4EFFD" FontFamily="ms-appx:///Assets/RobotoCondensed-Regular.ttf" FontSize="22"/>
+        <TextBlock Grid.Row="0" x:Name="tbPageName" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="PageName" VerticalAlignment="Top" Foreground="#FFD4EFFD" FontFamily="ms-appx:///Assets/RobotoCondensed-Regular.ttf" FontSize="22" Margin="147,0,0,0"/>
+        <TextBlock Grid.Row="1" x:Name="tbPageDescription" Foreground="#FFD4EFFD" FontFamily="ms-appx:///Assets/RobotoCondensed-Regular.ttf" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="PageDescription" VerticalAlignment="Top" Margin="6,0,0,0"/>
+        <StackPanel x:Name="spMenu" Grid.Row="2">
+            <Image x:Name="pageImage" HorizontalAlignment="Left" Height="130" Margin="10,10,0,0" VerticalAlignment="Top" Width="380" Stretch="Fill"/>
+            <TextBlock x:Name="tbPageTextHeader" TextWrapping="Wrap" Text="PageTextHeader" Foreground="#FFD4EFFD" FontFamily="ms-appx:///Assets/RobotoCondensed-Regular.ttf"/>
+            <TextBlock x:Name="tbPageTextCenter" TextWrapping="Wrap" Text="PageTextCenter" Foreground="#FFD4EFFD" FontFamily="ms-appx:///Assets/RobotoCondensed-Regular.ttf"/>
+            <TextBlock x:Name="tbPageTextFooter" TextWrapping="Wrap" Text="PageTextFooter" Foreground="#FFD4EFFD" FontFamily="ms-appx:///Assets/RobotoCondensed-Regular.ttf"/>
+        </StackPanel>
     </Grid>
 </UserControl>

@@ -10,8 +10,8 @@
     d:DesignWidth="360">
 
     <Grid Background="#FF30ACEC">
-        <Image x:Name="imgHome" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Source="ms-appx:///Assets/home.png" Stretch="Fill"/>
-        <Image x:Name="imgBack" HorizontalAlignment="Left" Height="50" Margin="51,0,0,0" VerticalAlignment="Top" Width="50" Source="ms-appx:///Assets/arrow-left-thick.png"/>
-        <Image x:Name="imgSettings" HorizontalAlignment="Left" Height="50" Margin="310,0,0,0" VerticalAlignment="Top" Width="50" Source="ms-appx:///Assets/settings.png"/>
+        <Image x:Name="imgHome" Tapped="imgHome_Tapped" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Source="ms-appx:///Assets/home.png" Stretch="Fill"/>
+        <Image x:Name="imgBack" Tapped="imgBack_Tapped" HorizontalAlignment="Left" Height="50" Margin="51,0,0,0" VerticalAlignment="Top" Width="50" Source="ms-appx:///Assets/arrow-left-thick.png"/>
+        <Image x:Name="imgSettings" Tapped="imgSettings_Tapped" HorizontalAlignment="Left" Height="50" Margin="310,0,0,0" VerticalAlignment="Top" Width="50" Source="ms-appx:///Assets/settings.png"/>
     </Grid>
 </UserControl>
