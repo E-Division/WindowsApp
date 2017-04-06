@@ -45,12 +45,12 @@ namespace E_Divison.Classes
 
             //car model names
             //nissan
-            con.Insert(new Brand(1, 1, "E-NV200 evalia", pageImage, "https://www.nissan.nl/voertuigen/nieuw/e-nv200.html"));
-            con.Insert(new Brand(2, 1, "Leaf", pageImage, "https://www.nissan.nl/voertuigen/nieuw/leaf.html"));
+            con.Insert(new Brand(1, 1, "E-NV200 evalia", nissanENV200Image, "https://www.nissan.nl/voertuigen/nieuw/e-nv200.html"));
+            con.Insert(new Brand(2, 1, "Leaf", nissanLeafImage, "https://www.nissan.nl/voertuigen/nieuw/leaf.html"));
             //renault
-            con.Insert(new Brand(1, 2, "twizy", pageImage, "https://www.renault.nl/modellen/elektrische-autos/twizy.html"));
-            con.Insert(new Brand(2, 2, "Zoë", pageImage, "https://www.renault.nl/modellen/elektrische-autos/zoe.html"));
-            con.Insert(new Brand(3, 2, "Kangoo Z.E.", pageImage, "https://www.renault.nl/modellen/elektrische-autos/kangoo-ze.html"));
+            con.Insert(new Brand(1, 2, "twizy", renaultTwizzyImage, "https://www.renault.nl/modellen/elektrische-autos/twizy.html"));
+            con.Insert(new Brand(2, 2, "Zoë", renaultZoeImage, "https://www.renault.nl/modellen/elektrische-autos/zoe.html"));
+            con.Insert(new Brand(3, 2, "Kangoo Z.E.", renaultKangooImage, "https://www.renault.nl/modellen/elektrische-autos/kangoo-ze.html"));
         }
 
         public void GetPage()
