@@ -19,7 +19,7 @@ namespace E_Divison.UserControls
 {
     public sealed partial class PageButtonUserControl : UserControl
     {
-        public PageButtonUserControl()
+        public PageButtonUserControl(string pageName, int categoryID)
         {
             this.InitializeComponent();
         }

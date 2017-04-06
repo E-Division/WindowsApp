@@ -35,7 +35,12 @@ namespace E_Divison.UserControls
             Category category = new Category();
             category.categoryID = categoryID;
             category.GetCategory();
-
+            Classes.Page page = new Classes.Page();
+            page.pageID = category.pageID;
+            page.GetPage();
+            txtPageName.Text = page.pageName;
+            txtPageDescription.Text = page.pageDescription;
+            LoadPage(page);
             //if (categoryID == 1)
             //{
                 //ImageManager imageManager = new ImageManager();
@@ -43,6 +48,42 @@ namespace E_Divison.UserControls
                 //imageManager.SetImage(imgHome, category.categoryImage);
                 //imgHome.Source = new BitMap(category.categoryImage);
             //}
+        }
+        private void LoadPage(Classes.Page page)
+        {
+            switch (page.pageType)
+            {
+                case "ActivityMenu":
+                    {
+                        PageActivityMenuUserControl activityMenu = new PageActivityMenuUserControl(categoryID);
+                        break;
+                    }
+                case "ActivityMenuText":
+                    {
+                        break;
+                    }
+                case "ActivityContact":
+                    {
+                        break;
+                    }
+                case "ActivityText":
+                    {
+                        break;
+                    }
+                case "ActivityImageText":
+                    {
+                        break;
+                    }
+                case "List":
+                    {
+                        break;
+                    }
+                default:
+                    {
+
+                    break;
+                    }
+            }
         }
         
         //private void button_Click(object sender, RoutedEventArgs e)

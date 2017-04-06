@@ -10,6 +10,11 @@
     d:DesignWidth="400">
 
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="txtPageTextHeader" HorizontalAlignment="Left" Grid.Row="0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <StackPanel x:Name="spMenu" Grid.Row="1"></StackPanel>
     </Grid>
 </UserControl>

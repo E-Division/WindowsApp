@@ -10,6 +10,21 @@
     d:DesignWidth="400">
 
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="130"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="txtName" Grid.Row="0" TextWrapping="Wrap" Text="Naam" Foreground="#FFD4EFFD" FontFamily="ms-appx:///Assets/RobotoCondensed-Regular.ttf"/>
+        <TextBlock x:Name="txtMail" Grid.Row="1" TextWrapping="Wrap" Text="E-mail" Foreground="#FFD4EFFD" FontFamily="ms-appx:///Assets/RobotoCondensed-Regular.ttf"/>
+        <TextBlock x:Name="txtTelephone" Grid.Row="2" TextWrapping="Wrap" Text="Telefoon" Foreground="#FFD4EFFD" FontFamily="ms-appx:///Assets/RobotoCondensed-Regular.ttf"/>
+        <TextBlock x:Name="txtMessage" Grid.Row="3" TextWrapping="Wrap" Text="Bericht" Foreground="#FFD4EFFD" FontFamily="ms-appx:///Assets/RobotoCondensed-Regular.ttf"/>
+        <TextBox x:Name="tbName" HorizontalAlignment="Left" Margin="140,3,0,0" Grid.Row="0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="166" Height="20"/>
+        <TextBox x:Name="tbMail" HorizontalAlignment="Left" Margin="140,3,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="166" Height="20"/>
+        <TextBox x:Name="tbTelephone" HorizontalAlignment="Left" Margin="140,3,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="166" Height="20"/>
+        <TextBox x:Name="tbMessage" HorizontalAlignment="Left" Margin="10,32,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="380" Height="88"/>
+        <Button x:Name="btnSend" Content="Verstuur" HorizontalAlignment="Left" Margin="178,10,0,0" Grid.Row="4" VerticalAlignment="Top"/>
     </Grid>
 </UserControl>

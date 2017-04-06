@@ -103,5 +103,13 @@ namespace E_Divison.Classes
             }
         }
 
+        public List<Category> GetSubCategories()
+        {
+            SQLiteConnection con = new DatabaseManager().GetCon();
+            var tableQuery = "SELECT * FROM Category WHERE categoryParentID = " + categoryID.ToString() + ";";
+            List<Category> selectedCategory = con.Query<Category>(tableQuery);
+            return selectedCategory;
+        }
+
     }
 }

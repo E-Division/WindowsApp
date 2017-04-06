@@ -10,6 +10,15 @@
     d:DesignWidth="400">
 
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="pageImage" Grid.Row="0" HorizontalAlignment="Left" Height="130" Margin="10,10,0,0" VerticalAlignment="Top" Width="380" Stretch="Fill"/>
+        <TextBlock x:Name="txtPageTextHeader" Grid.Row="1" TextWrapping="Wrap" Text="PageTextHeader" Foreground="#FFD4EFFD" FontFamily="ms-appx:///Assets/RobotoCondensed-Regular.ttf"/>
+        <TextBlock x:Name="txtPageTextCenter" Grid.Row="2" TextWrapping="Wrap" Text="PageTextCenter" Foreground="#FFD4EFFD" FontFamily="ms-appx:///Assets/RobotoCondensed-Regular.ttf"/>
+        <TextBlock x:Name="txtPageTextFooter" Grid.Row="3" TextWrapping="Wrap" Text="PageTextFooter" Foreground="#FFD4EFFD" FontFamily="ms-appx:///Assets/RobotoCondensed-Regular.ttf"/>
     </Grid>
 </UserControl>

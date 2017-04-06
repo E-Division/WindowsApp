@@ -6,10 +6,10 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="100" d:DesignWidth="200">
+    d:DesignHeight="100" d:DesignWidth="100">
     <Border Margin="2"
-                BorderBrush="White"
-                Background="LightGray"
+                BorderBrush="#FFD4EFFD"
+                Background="#FF30ACEC"
                 BorderThickness="6,6,6,6"
                 CornerRadius="50,50,50,50">
         <Grid x:Name="StageGrid">
@@ -19,7 +19,7 @@
                 <RowDefinition Height="35"/>
                 <RowDefinition Height="20"/>
             </Grid.RowDefinitions>
-            <TextBlock x:Name="tbPageName" HorizontalAlignment="Left" Margin="60,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="PageName" VerticalAlignment="Top"/>
+            <TextBlock x:Name="txtPageName" HorizontalAlignment="Left" Margin="2,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="PageName" VerticalAlignment="Top" Height="35" Width="82"/>
 
 
             <!--<Label x:Name="lblMusicianName" Grid.Row="0" Content="Muzikant Naam" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Width="190" Height="45"/>-->
@@ -27,7 +27,7 @@
             <!--<Label x:Name="lblStageName" Grid.Row="2" Content="Podium"/>-->
         </Grid>
         <!--<Border.Effect>-->
-            <!--<DropShadowEffect Color="Gray" Opacity="0.5" />-->
+        <!--<DropShadowEffect Color="Gray" Opacity="0.5" />-->
         <!--</Border.Effect>-->
     </Border>
 </UserControl>

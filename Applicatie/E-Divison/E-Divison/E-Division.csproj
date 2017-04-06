@@ -105,6 +105,21 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\PageActivityContactUserControl.xaml.cs">
+      <DependentUpon>PageActivityContactUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PageActivityImageTextUserControl.xaml.cs">
+      <DependentUpon>PageActivityImageTextUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PageActivityMenuTextUserControl.xaml.cs">
+      <DependentUpon>PageActivityMenuTextUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PageActivityMenuUserControl.xaml.cs">
+      <DependentUpon>PageActivityMenuUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PageActivityTextUserControl.xaml.cs">
+      <DependentUpon>PageActivityTextUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\PageButtonUserControl.xaml.cs">
       <DependentUpon>PageButtonUserControl.xaml</DependentUpon>
     </Compile>
@@ -148,6 +163,26 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\PageActivityContactUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PageActivityImageTextUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PageActivityMenuTextUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PageActivityMenuUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PageActivityTextUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\PageButtonUserControl.xaml">
       <SubType>Designer</SubType>

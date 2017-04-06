@@ -33,14 +33,17 @@ namespace E_Divison.UserControls
 
         private void LoadCategory()
         {
-
-            if (categoryID == 1 || categoryID == 2)
+            for (int i = 1; i <= 5; i++)
             {
-                imgBack.Visibility = Visibility.Collapsed;
-                imgHome.Source = new BitmapImage(new Uri("ms-appx:///Assets/Image636228400665325432.jpg"));
-                imgHome.Width = 200;
-                //imgHome.Source = new BitmapImage(new Uri("/MyProject;Assets/Image636228400664674921.jpg", UriKind.Relative));
+                if (categoryID == i)
+                {
+                    imgBack.Visibility = Visibility.Collapsed;
+                    imgHome.Source = new BitmapImage(new Uri("ms-appx:///Assets/Image636228400665325432.jpg"));
+                    imgHome.Width = 200;
+                    //imgHome.Source = new BitmapImage(new Uri("/MyProject;Assets/Image636228400664674921.jpg", UriKind.Relative));
+                }
             }
+           
         }
 
         private void OpenCategory(int categoryID)
