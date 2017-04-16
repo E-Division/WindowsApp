@@ -55,7 +55,8 @@ namespace E_Divison.UserControls
             {
                 case "ActivityMenu":
                     {
-                        PageActivityMenuUserControl activityMenu = new PageActivityMenuUserControl(categoryID);
+                        PageActivityMenuUserControl activityMenu = new PageActivityMenuUserControl(mainPage,categoryID);
+                        spPageContent.Children.Add(activityMenu);
                         break;
                     }
                 case "ActivityMenuText":

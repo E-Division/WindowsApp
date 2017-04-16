@@ -12,7 +12,7 @@
                 Background="#FF30ACEC"
                 BorderThickness="6,6,6,6"
                 CornerRadius="50,50,50,50">
-        <Grid x:Name="StageGrid">
+        <Grid x:Name="buttonGrid" Tapped="buttonGrid_Tapped">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="20"/>

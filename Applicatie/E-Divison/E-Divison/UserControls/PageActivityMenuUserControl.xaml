@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="300"
+    d:DesignHeight="590"
     d:DesignWidth="400">
 
     <Grid>
@@ -15,8 +15,8 @@
             <RowDefinition Height="100"/>
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
-        <StackPanel x:Name="spMenuFirst" Grid.Row="0"></StackPanel>
-        <StackPanel x:Name="spMenuSecond" Grid.Row="1"></StackPanel>
-        <StackPanel x:Name="spMenuThirth" Grid.Row="2"></StackPanel>
+        <StackPanel x:Name="spMenuFirst" Orientation="Horizontal" Grid.Row="0"></StackPanel>
+        <StackPanel x:Name="spMenuSecond" Orientation="Horizontal" Grid.Row="1"></StackPanel>
+        <StackPanel x:Name="spMenuThirth" Orientation="Horizontal" Grid.Row="2"></StackPanel>
     </Grid>
 </UserControl>

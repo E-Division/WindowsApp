@@ -21,10 +21,13 @@ namespace E_Divison.UserControls
     public sealed partial class PageActivityMenuUserControl : UserControl
     {
         private int categoryID;
-        public PageActivityMenuUserControl(int categoryID)
+        private MainPage mainPage;
+        public PageActivityMenuUserControl(MainPage mainPage,int categoryID)
         {
             this.InitializeComponent();
             this.categoryID = categoryID;
+            this.mainPage = mainPage;
+            LoadMenu();
         }
 
         public void LoadMenu()
@@ -34,8 +37,20 @@ namespace E_Divison.UserControls
             List<Category> categoryMenuList = category.GetSubCategories();
             foreach (Category categoryItem in categoryMenuList)
             {
-                //Ik kom er ff niet uit te moe.
-               // PageButtonUserControl pageButton = new PageButtonUserControl(categoryItem.categoryName);
+               
+               PageButtonUserControl pageButton = new PageButtonUserControl(mainPage,categoryItem.categoryName, categoryItem.categoryID);
+                if(spMenuFirst.Children.Count() < 3)
+                {
+                    spMenuFirst.Children.Add(pageButton);
+                }
+                else if(spMenuSecond.Children.Count() < 3)
+                {
+
+                }
+                else if(spMenuThirth.Children.Count() < 3)
+                {
+
+                }
             }
         }
     }

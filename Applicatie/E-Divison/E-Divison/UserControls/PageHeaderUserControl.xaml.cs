@@ -58,7 +58,7 @@ namespace E_Divison.UserControls
 
         private void imgSettings_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            OpenCategory(categoryID - 1);
+            OpenCategory(2);
         }
 
         private void imgHome_Tapped(object sender, TappedRoutedEventArgs e)

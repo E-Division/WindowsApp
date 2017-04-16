@@ -19,9 +19,19 @@ namespace E_Divison.UserControls
 {
     public sealed partial class PageButtonUserControl : UserControl
     {
-        public PageButtonUserControl(string pageName, int categoryID)
+        MainPage mainPage;
+        int categoryID;
+        public PageButtonUserControl(MainPage mainPage, string pageName, int categoryID)
         {
             this.InitializeComponent();
+            txtPageName.Text = pageName;
+            this.mainPage = mainPage;
+            this.categoryID = categoryID;
+        }
+
+        private void buttonGrid_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            mainPage.PageLoader(categoryID);
         }
     }
 }
